@@ -1,0 +1,22 @@
+﻿body {
+    background: #000000 url('img/bg.jpeg');
+    background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    filter: blue(1000px);
+    min-height: 300px;
+    min-width: 300px;
+}
+
+.audio {
+    position: absolute;
+    right: 0;
+    bottom: 1;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.audio audio {
+    display: none;
+}

@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
-  <title>Please wait...</title>
+  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="icon" href="favicon.ico">
+
+  <title>Привет :3</title>
+  
 
   <style>
     body {
@@ -18,24 +23,35 @@
       background-size: auto 100%;
       background-repeat: no-repeat;
       filter: blue(1000px);
+      min-height: 500px;
     }
+
   </style>
 
 
 </head>
 
-<body id="body">
+<body id="body"> 
 
-  <div class="container-fluid h-100">
-
+  <div class="container-fluid h-100 d-flex flex-column align-items-stretch justify-content-between">
     <div class="row h-100">
-      <div class="col-12 align-self-stretch d-flex flex-column align-items-stretch justify-content-between">
-        <h1 class="display-1 text-white text-center h-100 align-self-center d-flex justify-content-center align-items-center" id="timer">
-        </h1>
-        <p class="flex-shrink-1 text-secondary text-center">by <a class="text-secondary" href="https://vk.com/korshunoff_ru">korshunoff_ru</a></p>
+      <div class="col-12 d-flex align-items-center justify-content-center">
+          <h1 class="display-1 text-white text-center" id="timer"></h1>
       </div>
     </div>
+    <div class="row">
+        <div class="col-12 d-flex align-items-end justify-content-center">
+          <p class="text-secondary text-center">by <a class="text-secondary" href="https://vk.com/korshunoff_ru">korshunoff_ru</a></p>
+        </div>
   </div>
+
+  <div class="audio">
+      <audio controls autoplay loop>
+        <source src="music/Mujo feat. Made in M - Mirror.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+      </audio>
+  </div>
+  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -71,12 +87,25 @@
 
       updateClock();
       var timeinterval = setInterval(updateClock, 1000);
+
+      var titles = ['Рядовой!',
+                    'Равняйсь!',
+                    'Смирно!',
+                    'Выше пятку тяни!',
+                    'Почему не на посту?!',
+                    'Плац дочистил?',
+                    'Кто это сделал?!',
+                    'Почему не брит?'];
+      document.title = titles[0];
+      var timeTitle = setInterval(() => {
+        document.title = titles[Math.floor(Math.random() * titles.length)];
+      }, 3000);
+      
     }
 
     var deadline = new Date('November 01 2019 00:00:00 GMT+0300');
     initializeClock(deadline);
 
-    
   </script>
 
 
