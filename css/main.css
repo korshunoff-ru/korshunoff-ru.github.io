@@ -18,5 +18,5 @@
 }
 
 .audio audio {
-    display: none;
+    display: block;
 }
