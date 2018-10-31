@@ -15,38 +15,35 @@
 
   <title>Привет :3</title>
   
-
-  <style>
-    body {
-      background: #000000 url('img/bg.jpeg');
-      background-position: center center;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      filter: blue(1000px);
-      min-height: 500px;
-    }
-
-  </style>
-
-
 </head>
 
 <body id="body"> 
 
+  <div class="background-image"></div>
+  <div class="blur-border"></div>
+  
   <div class="container-fluid h-100 d-flex flex-column align-items-stretch justify-content-between">
     <div class="row h-100">
-      <div class="col-12 d-flex align-items-center justify-content-center">
-          <h1 class="display-1 text-white text-center" id="timer"></h1>
+      <div class="col-5"></div>
+      <div class="col-2 d-flex align-items-center justify-content-center">
+          <div class="blur"></div>
+          <h1 class="display-1 text-white text-center up" id="timer"></h1>
       </div>
+      <div class="col-5"></div>
     </div>
     <div class="row">
-        <div class="col-12 d-flex align-items-end justify-content-center">
-          <p class="text-secondary text-center">by <a class="text-secondary" href="https://vk.com/korshunoff_ru">korshunoff_ru</a></p>
+      <div class="col-5"></div>
+        <div class="col-2 d-flex align-items-end justify-content-center">
+          <div class="blur"></div>
+          <p class="text-secondary text-center up">by <a class="text-secondary" href="https://vk.com/korshunoff_ru">korshunoff_ru</a></p>
         </div>
+        <div class="col-5"></div>
   </div>
 
   <div class="audio">
-      <iframe src="music/Mujo feat. Made in M - Mirror.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio controls loop autoplay hidden>
+      <source src="music/Mujo feat. Made in M - Mirror.mp3" type="audio/mpeg">
+    </audio>
   </div>
   
 
